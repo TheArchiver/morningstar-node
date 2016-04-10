@@ -1,5 +1,7 @@
 # morningstar-node
 
+[![npm](https://img.shields.io/npm/v/morningstar-node.svg?maxAge=2592000)]()
+
 Provides access to the financial quote data via an unsupported morningstar financial data API.
 Many functions return a cleaned view of data.
 
