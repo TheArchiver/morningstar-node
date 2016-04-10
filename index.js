@@ -1,17 +1,16 @@
 const axios = require('axios');
 const util  = require('util');
-const R     = require('ramda');
 
 const toIsoDate = (date) => new Date(date).toISOString().replace(/T(.*)/, '');
 
 // url formatting
 // ==============
 
-const historicalUrl = (ticker, fromDate, toDate) =>
+const historicalUrl = (symbol, fromDate, toDate) =>
   util.format('http://globalquote.morningstar.com/globalcomponent'+
     '/RealtimeHistoricalStockData.ashx?ticker=%s&showVol=true&dtype=his&f=d'+
     '&curry=USD&range=%s|%s&isD=true&isS=true&hasF=true'+
-    '&ProdCode=DIRECT', ticker, toIsoDate(fromDate), toIsoDate(toDate));
+    '&ProdCode=DIRECT', symbol, toIsoDate(fromDate), toIsoDate(toDate));
 
 // response
 // ========
@@ -25,13 +24,29 @@ const responseHandler = (response) => {
   return JSON.parse(cleanedData);
 }
 
+const parseDividend = (morningstarDividend) => {
+  return {
+    date: toIsoDate(morningstarDividend.Date),
+    amount: parseFloat(morningstarDividend.Desc.replace(/[a-zA-Z:<>]/g, '')),
+    type: morningstarDividend.Type.toLowerCase(),
+  }
+}
+
 // exported
 // ========
 
 const historical = opts =>
-  axios.get(historicalUrl(opts.ticker, opts.from, opts.to))
+  axios.get(historicalUrl(opts.symbol, opts.from, opts.to))
   .then(responseHandler);
+
+const dividend = opts => {
+  return historical(opts)
+  .then((historical) => {
+    return historical.DividendData.map(parseDividend);
+  });
+}
 
 module.exports = {
   historical: historical,
+  dividend: dividend
 };

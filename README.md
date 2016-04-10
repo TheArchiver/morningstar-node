@@ -1,8 +1,11 @@
 # morningstar-node
 
 Provides access to the financial quote data via an unsupported morningstar financial data API.
+Many functions return a cleaned view of data.
 
 ## API
+
+#### historical
 
 ```
 morningstar.historical({
@@ -11,7 +14,29 @@ morningstar.historical({
   to: END_DATE
 })
 ```
-returns a Promise for a `historical` response object ([sample](static/vti-response.json))
+=> Promise for a raw `historical` response object ([sample](static/vti-response.json))
+
+#### dividend
+
+```
+morningstar.dividend({
+  symbol: SYMBOL,
+  from: START_DATE,
+  to: END_DATE
+})
+```
+=> Promise for array of `dividend` objects:
+
+```
+[
+  {
+    date: '2015-03-25',
+    amount: 0.5080,
+    type: 'dividend'
+  },
+  ...
+]
+```
 
 ## development
 
