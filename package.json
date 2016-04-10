@@ -1,0 +1,34 @@
+{
+  "name": "morningstar-node",
+  "version": "0.0.0",
+  "description": "morningstar financial data api",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbuckheit/morningstar-node.git"
+  },
+  "keywords": [
+    "morningstar",
+    "stock",
+    "quote",
+    "financial",
+    "api"
+  ],
+  "author": "Ryan Buckheit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rbuckheit/morningstar-node/issues"
+  },
+  "homepage": "https://github.com/rbuckheit/morningstar-node#readme",
+  "dependencies": {
+    "axios": "0.9.1"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.5",
+    "xyz": "0.5.0"
+  }
+}

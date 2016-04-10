@@ -1,0 +1,68 @@
+{
+  "DividendData": [
+    {
+      "Date": "2015-03-25",
+      "Desc": "Dividends:0.5080<br>",
+      "Type": "Dividend",
+      "x": 50,
+      "y": 0
+    }
+  ],
+  "FairValueList": null,
+  "Max": 109,
+  "Min": 106,
+  "PriceDataList": [
+    {
+      "DailyMaxNumPoint": -1,
+      "Datapoints": [
+        [
+          108.99,
+          109.74,
+          108.94,
+          109.54
+        ],
+        [
+          106.79,
+          108.75,
+          106.79,
+          108.64
+        ],
+        [
+          106.58,
+          107.12,
+          105.98,
+          106.39
+        ]
+      ],
+      "DateIndexs": [
+        42085,
+        42086,
+        42087
+      ],
+      "Description": "",
+      "Max": 108.99,
+      "Min": 106.58,
+      "Slot": 3,
+      "StartPos": 108.99,
+      "Symbol": "ARCX:VTI",
+      "chartType": 0
+    }
+  ],
+  "PriceType": "",
+  "VolumeList": {
+    "DailyMaxNumPoint": 79,
+    "Datapoints": [
+      3.398636,
+      2.817019,
+      3.164547
+    ],
+    "DateIndexs": null,
+    "Description": "",
+    "Max": 3.398636,
+    "Min": 0,
+    "Slot": 0,
+    "StartPos": null,
+    "Symbol": "",
+    "chartType": 1
+  }
+}
