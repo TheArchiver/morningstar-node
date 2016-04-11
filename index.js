@@ -20,8 +20,13 @@ const responseHandler = (response) => {
     console.error('morningstar request failed', response);
     throw new Error(response.statusText);
   }
-  const cleanedData = response.data.replace(/\bNaN\b/g, "null");
-  return JSON.parse(cleanedData);
+
+  if (typeof response.data === 'string') {
+    const cleanedData = response.data.replace(/\bNaN\b/g, "null");
+    return JSON.parse(cleanedData);
+  } else if (typeof response.data === 'object') {
+    return response.data;
+  }
 }
 
 const parseDividend = (morningstarDividend) => {
