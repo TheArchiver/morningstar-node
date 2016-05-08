@@ -1,6 +1,6 @@
 {
   "name": "morningstar-node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "morningstar financial data api",
   "main": "index.js",
   "scripts": {
