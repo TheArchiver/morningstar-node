@@ -4,7 +4,6 @@
   "description": "morningstar financial data api",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
   },
   "repository": {
     "type": "git",
