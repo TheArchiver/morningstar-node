@@ -9,11 +9,6 @@
     "url": "git+https://github.com/rbuckheit/morningstar-node.git"
   },
   "keywords": [
-    "morningstar",
-    "stock",
-    "quote",
-    "financial",
-    "api"
   ],
   "author": "Ryan Buckheit",
   "license": "MIT",
