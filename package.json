@@ -1,6 +1,6 @@
 {
   "name": "morningstar-node",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "morningstar financial data api",
   "main": "index.js",
   "scripts": {},
@@ -8,8 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/rbuckheit/morningstar-node.git"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Ryan Buckheit",
   "license": "MIT",
   "bugs": {
