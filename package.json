@@ -1,10 +1,9 @@
 {
   "name": "morningstar-node",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "morningstar financial data api",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rbuckheit/morningstar-node.git"
@@ -22,8 +21,7 @@
     "url": "https://github.com/rbuckheit/morningstar-node/issues"
   },
   "homepage": "https://github.com/rbuckheit/morningstar-node#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "xyz": "0.5.0"
   }
